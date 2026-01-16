@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav>
+            <a class="berritech-btn">
+                <img src="irudiak/LogoErronka1.png" alt="Berritech">
+            </a>
+            <a href="indexEN.html">HOME</a>
+            <a href="ProduktuakEN.html">PRODUCTS</a>
+            <a href="norgaraEN.html">ABOUT US</a>
+            <a href="formularioaEN.html">FORM</a>
+            <a href="loginEN.html">LOGIN</a>
+            <div class="hizkuntza">
+                <a href="formularioa.html"> EU</a> |
+                <a href="formularioaEN.html">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENT -->
+    <section id="formularioa">
+
+        <form>
+            <label for="izena">Name:</label><br>
+            <input type="text" id="izena" name="izena" placeholder="Your name or company name"><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="your@email.com"><br><br>
+
+            <label for="telefonoa">Phone:</label><br>
+            <input type="tel" id="telefonoa" name="telefonoa" placeholder="Example: 666123456"><br><br>
+
+            <label for="mota">What type of equipment or components will you provide?</label><br>
+            <select id="mota" name="mota">
+                <option value="">Select</option>
+                <option value="ordenagailu_berezi">Complete computer</option>
+                <option value="portatil">Laptop</option>
+                <option value="osagaiak">Components (RAM, CPU, GPU, etc.)</option>
+                <option value="beste">Other</option>
+            </select><br><br>
+
+            <label for="mezua">Message:</label><br>
+            <textarea id="mezua" name="mezua"
+                placeholder="Please include additional information, condition, quantity, etc."></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>Email: info@company.com | Tel: +34 600 123 456</p>
+        <p>Address: Main Street 12, San Sebastian, Basque Country</p>
+        <p>
+        <div class="redes">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">X</a>
+        </div>
+        </p>
+    </footer>
+</body>
+
+</html>

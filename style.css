@@ -1,0 +1,723 @@
+/* -------------------------
+   BASEA
+------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*margenak ez edukitzeko eskinetan*/
+}
+
+body {
+    font-family: Arial, sans-serif;/*letra mota da*/
+    background: #FAFAF9;
+    /* fondo kolorea emateko */
+    color: #1F2937;
+    /* gris oscuro suave para texto */
+    line-height: 1.5; /*lerroen separazioa*/
+    min-height: 100vh;/*pantaila guztia okupatzeko*/
+    display: flex;  
+    flex-direction: column;/*barruko elementuak zutabe moduan antolatzen ditu*/
+}
+
+/* -------------------------
+   MENUA (HEADER)
+------------------------- */
+.logo img {
+    height: 60px;/*logoaren altuera*/
+    width: auto; /*automatikoki jartzen du, argazkia ondo ikusteko*/
+    border-radius: 8px;/*ertzak borobiltzeko*/
+    
+}
+
+
+header {
+    background: #A8D5BA;/*fondoko kolorea*/
+    text-align: center;/*textua erdian jartzeko*/
+    padding: 15px;/*textuen arteko separazioa jartzen du*/
+}
+
+nav a {
+    color: #1F2937;
+    margin: 0 15px;/*ezkerrean eta eskudian espazioak jartzeko, goran eta beheran ez*/
+    text-decoration: none;/*azpimarra kentzeko*/
+    font-weight: bold;/*textua potolo jartzen du*/
+}
+
+
+.hizkuntza {
+    float: right;/*eskubian jartzeko */
+    margin-left: 20px;/*ezkerrean espazioa jartzeko*/
+}
+
+.hizkuntza a {
+    text-decoration: none;/*azpimarra kentzeko*/
+    margin: 0 5px;/*ezkerrean eta eskubian espazioak emateko*/
+    font-weight: bold;/*textu lodia jartzeko*/
+}
+
+.hizkuntza a:hover {
+    text-decoration: underline;/*gainean gaudenean azpimarratu egiten da*/
+}
+
+.berritech-btn {
+    display: inline-block;/*linean jartzen du baina bere estilo bereziekin*/
+    margin: 0 15px;/*ezkerrean eta eskubian separazioa*/
+    vertical-align: middle;/*beste lerroekin lerrokatzen du*/
+}
+
+.berritech-btn img {
+    height: 60px;/*altuera definitzeko*/
+    width: auto;/*automatikoki potolera*/
+    border-radius: 8px;/*ertzak borobiltzeko*/
+    object-fit: contain;/*irudia osorik erakusteko*/
+    vertical-align: middle;/*beste gauzekin aliniatzeko bertikalki*/
+}
+
+
+
+
+
+/* -------------------------
+   FOOTER
+------------------------- */
+footer {
+    background: #A8D5BA;
+    color: #1F2937;
+    text-align: center;/*elementuak erdian jartzeko*/
+    padding: 20px;/*barneko tartea*/
+    margin-top: auto;/*automatikoki footerrra behera eramaten du*/
+}
+
+/* -------------------------
+   LINKAK FOOTERREAN
+------------------------- */
+footer .redes a {
+    text-decoration: none;/*azpimarra kentzeko*/
+    color: #4B6B8A;/*kolorea emateko*/
+    font-weight: bold;/*textua potolo agertzeko*/
+    margin: 0 10px;/*loturen tarteko separazioa*/
+    transition: color 0.3s;/*kolorea aldatzeko transizioa*/
+}
+
+footer .redes a:hover {
+    color: #6FCF97;/*kolorea gainean dagoenean*/
+}
+
+/* -------------------------
+   SECCIONES GENERALES
+------------------------- */
+section {
+    padding: 30px;/*distantzia edukitzeko*/
+    flex: 1;/*espazioa modu proportzionalean edukitzeko*/
+}
+
+/* -------------------------
+   SARRERA (index.html)
+------------------------- */
+#sarrera {
+    display: flex;
+    justify-content: space-between;/*bere barruan dauden gauzetan espazio berdina jartzen du*/
+    align-items: flex-start;/*elementuak bertikalki antolatzen ditu*/
+    gap: 20px;/*elementuen artean distantzia*/
+    flex-wrap: wrap;/*lerroak mugitu egiten dira pantaila txikitzen bada*/
+    background: #FAFAF9;
+    padding: 20px; /*barruko separazioa*/
+    border-radius: 10px;/*ertzak borobiltzeko*/
+}
+
+#sarrera .irudia {
+    flex: 1 1 48%;/* irudia erdia baino gutxiagora pasatzen da bere tamaina, pantailaren arabera aldatzen da */
+    height: 380px;/* altuera fijatzen du */
+    overflow: hidden;/*edukitik ateratzen dena ez da agertuko */
+    border-radius: 10px;/*ertzak borobilduta*/
+    display: flex;/*irudia erdian jartzen du*/
+    align-items: center;/*irudia erdian jartzen du*/
+    justify-content: center;/*irudia erdian jartzen du*/
+    background: #E8E8E8;
+}
+
+#sarrera .irudia img {
+    width: 100%;/*zabalera*/
+    height: 100%;/*altuera*/
+    object-fit: cover;/*karratua beti betetzen du*/
+    border-radius: 10px;/*ertz borobilak*/
+}
+
+
+.informazioa {
+    background: #f9f9f9;
+    padding: 35px;/*edukiaren inguruko separazioa*/
+    border-radius: 12px;/*ertzak borobil*/
+    margin: 20px auto;/*gohian eta beheran separazioa eta zentratu orizontalki*/
+    max-width: 800px;/*zabaleara maximoa*/
+}
+
+.informazioa h2 {
+    font-size: 2em;/*tamaina handia*/
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-align: center;/*textua erdian*/
+}
+
+.informazioa h3 {
+    font-size: 1.4em;/*letra tamaina*/
+    color: #2e8b57;
+    margin-top: 20px;/*goiko tartea*/
+    margin-bottom: 10px;/*bere artean dauden gauzei espazio bat jartzen die*/
+}
+
+.informazioa p {
+    font-size: 1.1em;/*letra tamaina*/
+    color: #555;/*kolorea ematen dio*/
+    margin-bottom: 15px;/*iguruneko tartea*/
+    line-height: 1.7em;/*lerroen tamaina*/
+    text-align: justify;
+}
+
+.informazioa .btn {
+    display: inline-block;/*lerroan egon daiteke baina blokearen ezaugarriekin*/
+    padding: 12px 24px;/*gian,beheran,ezkerrean,eskubiko barteak*/
+    background: #2e8b57;
+    color: #fff;
+    border-radius: 8px;/*ertz borobila*/
+    text-decoration: none;/*azpimarra kendu*/
+    font-weight: bold;/*textua lodiz*/
+    transition: background 0.3s, transform 0.2s;/*kolorea aldatu eta transizioa*/
+    margin-top: 20px;/*goiko separazioa*/
+}
+
+.informazioa .btn:hover {
+    background: #246b45;/*transizioko kolorea*/
+}
+
+
+#sarrera .berriak {
+    background: #E8E8E8;
+    padding: 20px;/*barruko tartea*/
+    width: 30%;/*zabalera*/
+    text-align: center;/*textua erdian*/
+    min-width: 250px;/*zabaleara minimoa*/
+    border-radius: 10px;/*ertz borobilak*/
+}
+
+#sarrera .berriak ul {
+    list-style-type: none;/*puntuak kentzen ditu*/
+    padding: 0;/*espazioak kentzeko*/
+    margin: 0;/*espazioak kentzeko*/
+}
+
+#sarrera .berriak li {
+    margin: 10px 0;/*zerrendako bakoitzak edukiko duen tartea*/
+}
+
+#sarrera .berriak a {
+    text-decoration: none;/*azpimarra kentzen du*/
+    color: #4B6B8A;
+    font-weight: bold;/*textu lodia*/
+    transition: color 0.3s;
+}
+
+#sarrera .berriak a:hover {
+    color: #6FCF97;/*transizioaren kolorea*/
+}
+
+/* -------------------------
+   IRITZIAK / FEEDBACK
+------------------------- */
+#feedback {
+    margin-top: 40px;/*goiko tartea*/
+    background: #f9f9f9;
+    padding: 35px;/*barruko tartea*/
+    border-radius: 12px;/*ertzak borobil*/
+    border: 2px solid #2e8b57; /* kutxaren borde kolorea eta lodiera */
+
+}
+
+#feedback h2 {
+    color: #2e8b57;
+    text-align: center;/*textuua erdian*/
+    margin-bottom: 15px;/*beheko tartea*/
+}
+
+#feedback p {
+    text-align: center;/*textua erdian*/
+    color: #555;
+    margin-bottom: 20px;/*baheko tartea*/
+}
+
+#feedback form {
+    max-width: 500px;/*zabalera maxiomaoa*/
+    margin: 0 auto;/*horizontalki zentratuta*/
+    display: flex;/*zutabe moduan agertzeko*/
+    flex-direction: column;/*zutabe moduan agertzeko*/
+}
+
+#feedback label {
+    font-weight: bold;/*textua lodiz*/
+    margin-top: 10px;/*gpiko separazioa*/
+    color: #2c3e50;
+}
+
+#feedback textarea {
+    padding: 10px;/*barruko tartea*/
+    margin-top: 5px;/*goiko tartea*/
+    border: 1px solid #bbb;
+    border-radius: 6px;/*ertz borobilak*/
+    font-size: 1em;/*textuaren tamaina*/
+}
+
+
+#feedback button {
+    background: #2e8b57;
+    color: white;
+    border: none;/*borderik gabe*/
+    padding: 12px;/*barruko tartea*/
+    border-radius: 8px;/*ertz borobilak*/
+    margin-top: 20px;/*goiko tartea*/
+    font-size: 1em;/*textuaren tamaina*/
+    transition: background 0.3s, transform 0.2s;/*efectua*/
+}
+
+#feedback button:hover {
+    background: #246b45;
+    transform: scale(1.05);/*handiago egiten da*/
+}
+
+
+/* -------------------------
+   PRODUKTUAK (produktuak.html)
+------------------------- */
+#produktuak .grid {
+    display: grid;/*edukia sare moduan antolatzen du*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));/*zutabeak sortzen ditu eta bakoitzak gutxienez 250px izango da*/
+    gap: 20px;/*karratuen arteko tamaina*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;/*edukiaren inguruan 20px tartea*/
+}
+
+.produktu {
+    text-align: center;/*textuak eta elementuak erdian jartzeko*/
+    background-color: #f7f7f7;
+    border-radius: 10px;/*ertzak borobil*/
+    padding: 15px;/*barruko tartea*/
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);/*itzal bat jartzen dio karratuari*/
+}
+
+.produktu img {
+    width: 100%;/*irudia beti kutxaren zabalera osoa*/
+    max-width: 250px;/*ez du sobrepasatuko 250px*/
+    border-radius: 8px;/*ertz borobilak*/
+    margin-bottom: 10px;/*irudiaren eta testuaren tartea*/
+}
+
+.produktu h3 {
+    margin: 5px 0;/*separazioa*/
+    font-size: 18px;/*textu tamaina*/
+    color: #222;
+}
+
+.produktu p {
+    margin: 3px 0;/*separazioa*/
+    font-size: 15px;/*textu tamaina*/
+    color: #555;
+}
+
+.prezioa {
+    font-weight: bold;/*textu potoloa*/
+    color: #2e8b57;
+}
+
+.erosi {
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    padding: 8px 16px;/*separazioa*/
+    border-radius: 6px;/*ertz borobilak*/
+    margin-top: 10px;
+}
+
+.erosi:hover {
+    background-color: #2e8b57;
+}
+
+
+/* -------------------------
+   NOR GARA (norgara.html)
+------------------------- */
+#norgara {
+    padding: 40px 20px;/*tartea goi/behean, 20 aldeetan*/
+    max-width: 1200px;/*zabalera maximoa*/
+    margin: auto;/*orriaren erdian jartzen du*/
+}
+
+#norgara h1 {
+    text-align: center;/*erdian jarri*/
+    margin-bottom: 40px;/*tarta jarri beheran*/
+    font-size: 2.2em;/*letra tamaina*/
+    color: #2c3e50;
+}
+
+#norgara .content {
+    display: flex;/*edukia lerro berdinean (textua + irudia)*/
+    gap: 30px;/*bien arteko separazioa*/
+    margin-bottom: 40px;/*beheko separazioa*/
+    flex-wrap: wrap;/*pantaila txikitzen badugu, gauzak azpian agertzen dira*/
+    align-items: center;/*elementuak erdian agertzeko*/
+}
+
+#norgara .testua {
+    flex: 2;/*testuak irudiak baino leku gehiago hartzen du*/
+    background: #f9f9f9;
+    padding: 30px;/*barruko tartea*/
+    margin-bottom: 20px;/*azpiko separazioa*/
+    border-radius: 12px;/*ertz borobilak*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#norgara .testua h2 {
+    color: #2e8b57;
+    margin-bottom: 10px;/*azpiko separazioa*/
+}
+
+#norgara .testua p {
+    color: #555;
+    line-height: 1.6em;/*lerroen arteko tartea*/
+    margin-bottom: 20px;/*azpiko separazioa*/
+}
+
+#norgara .testua ul {
+    list-style: none;/*zerrendak ez edukitzeko punturik*/
+    padding: 0;/*barruko tartea*/
+}
+
+#norgara .testua ul li {
+    margin-bottom: 10px;/*azpiko separazioa*/
+    font-weight: bold;
+    color: #333;
+}
+
+/* Imagen */
+#norgara .irudia {
+    flex: 1;/*irudiak testuak baino espazio txikiagoa*/
+    display: flex;/*irudia erdian jartzeko*/
+    justify-content: center;/*irudia erdian jartzeko*/
+}
+
+#norgara .irudia img {
+    width: 100%;/*irudia txutxa osoa*/
+    max-width: 450px;/*tamaina maximoa*/
+    border-radius: 12px;/*ertz borobilak*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);/*itzala*/
+    object-fit: cover;/*irudia mozten da beharrezkoa bada*/
+}
+
+/* Mapa */
+#norgara .maps {
+    margin-top: 40px;/*goiko separazioa*/
+    text-align: center;/*textua erdian jartzeko*/
+}
+
+#norgara .maps h2 {
+    margin-bottom: 15px;/*azpiko separazioa*/
+    color: #2c3e50;
+}
+
+#norgara .maps iframe {
+    width: 100%;/*zabalera osoa*/
+    height: 350px;/*altuera*/
+    border-radius: 12px;/*ertz borobilak*/
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);/*sombra gutxi*/
+}
+
+/* -------------------------
+   FORMULARIOA (formularioa.html)
+------------------------- */
+#formularioa form {
+    background: #f0f0f0;
+    padding: 20px;/*barruko tartea*/
+    max-width: 400px;/*zabalera maximoa*/
+    margin: auto;/*formularioa erdian jartzen du*/
+    border: 1px solid #ccc;/*marra fin bat egiten du*/
+    border-radius: 8px;/*ertzak borobil*/
+}
+
+#formularioa label {
+    font-weight: bold;/*letra potoloa edukitzeko(izena,email...)*/
+}
+
+#formularioa input,
+#formularioa textarea {
+    width: 100%;/*kutxaren tamaina osoa betetzeko*/
+    padding: 8px;/*barrukok tartea*/
+    margin-top: 5px;/*goiko tartea*/
+    margin-bottom: 15px;/*azpiko tartea*/
+    border: 1px solid #aaa;
+    border-radius: 4px;/*ertz borobil*/
+}
+
+#formularioa button {
+    padding: 10px 20px;/*barruko tartea*/
+    background: #2e8b57;
+    color: white;
+    border: none;/*ertzik gabe*/
+    border-radius: 4px;/*ertz borobilak*/
+    cursor: pointer;
+    font-weight: bold;/*xagua aldatzeko*/
+    transition: background 0.3s;
+}
+
+#formularioa button:hover {
+    background: #f39c12;
+}
+
+/* -------------------------
+   LOGIN (login.html)
+------------------------- */
+#login {
+    display: flex;/*elementuak flexbox bidez antolatzeko*/
+    flex-direction: column;/*elementuak bakoitzaren azpian agertzeko*/
+    align-items: center;/*textua erdian agertzeko*/
+    justify-content: center;/*bertitalki erdian*/
+    padding: 50px 20px;/*goiko/beheran eta ezker/eskubui*/
+    flex: 1;/*orrialdearen barruko sekzio guztia*/
+}
+
+#login h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;/*separazioa azpian*/
+    font-size: 2em;/*letra tamaina*/
+}
+
+.login-box {
+    background: #f9f9f9;
+    padding: 35px 40px;/*separazioa*/
+    border-radius: 12px;/*ertz borobilak*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);/*itzala*/
+    width: 100%;/*zabalera*/
+    max-width: 400px;/*zabalera maximoa*/
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-box label {
+    font-weight: bold;/*letra potoloa*/
+    color: #2c3e50;
+    margin-top: 10px;/*goiko separazioa*/
+}
+
+.login-box input {
+    margin-top: 5px;/*goiko separazioa*/
+    margin-bottom: 15px;/*azpiko separazioa*/
+    padding: 10px;/*barruko separazioa*/
+    border: 1px solid #bbb;
+    border-radius: 6px;/*ertz borobila*/
+    font-size: 1em;/*letra tamaina*/
+    width: 100%;/*zabalera maximoa*/
+}
+
+.login-box input:focus {
+    border-color: #6FCF97;
+    outline: none;/*marra urdina kentzeko*/
+    box-shadow: 0 0 5px rgba(111, 207, 151, 0.4);
+}
+
+.login-box button {
+    background: #2e8b57;
+    color: white;
+    border: none;
+    padding: 12px;/*barruko separazioa*/
+    border-radius: 8px;/*ertz borobilak*/
+    font-size: 1em;/*letra tamaina*/
+    font-weight: bold;/*letra potoloa*/
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.login-box button:hover {
+    background: #246b45;
+    transform: scale(1.05);
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.no-account a {
+    text-decoration: none;/*azpimarrarik gabe*/
+    color: #4B6B8A;
+    font-weight: bold;/*letra potoloa*/
+    transition: color 0.3s;
+}
+
+.no-account a:hover {
+    color: #6FCF97;
+}
+
+/* -------------------------
+   CREATE USER (createUser.html)
+------------------------- */
+#create-user {
+    display: flex;
+    flex-direction: column;/*gauza bakoitza bestearen azpian agertzeko*/
+    align-items: center;/*textua erdian*/
+    justify-content: center;/*bertikalki erdian*/
+    padding: 50px 20px;/*separazioa*/
+    flex: 1;/*pantailako espazio nagusia hartzen du*/
+}
+
+#create-user h1 {
+    color: #2c3e50;
+    margin-bottom: 25px;/*goiko separazioa*/
+    font-size: 2em;/*letra tamaina*/
+}
+
+.register-box {
+    background: #f9f9f9;
+    padding: 35px 40px;/*separazioa*/
+    border-radius: 12px;/*ertzak borobil*/
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;/*zabalera*/
+    max-width: 450px;/*eduki dezakeen zabalera amximoa*/
+}
+
+.register-box form {
+    /*biak elementuak bestearen azpian agertzeko erabiltzen dira*/
+    display: flex;
+    flex-direction: column;
+}
+
+.register-box label {
+    font-weight: bold;/*letra potoloa*/
+    color: #2c3e50;
+    margin-top: 10px;/*goiko separazioa*/
+}
+
+.register-box input {
+    margin-top: 5px;/*goiko separazioa*/
+    margin-bottom: 15px;/*azpiko separazioa*/
+    padding: 10px;/*barruko separazioa*/
+    border: 1px solid #bbb;
+    border-radius: 6px;/*ertz borobilak*/
+    font-size: 1em;/*letra tamaina*/
+    width: 100%;/*zabalera*/
+}
+
+.register-box input:focus {
+    border-color: #6FCF97;
+    outline: none;/*marra urdina kentzeko*/
+    box-shadow: 0 0 5px rgba(111, 207, 151, 0.4);
+}
+
+.register-box button {
+    background: #2e8b57;
+    color: white;
+    border: none;
+    padding: 12px;/*barruko separazioa*/
+    border-radius: 8px;/*ertz borobilak*/
+    font-size: 1em;/*letra tamaina*/
+    font-weight: bold;/*letra potoloa*/
+    cursor: pointer;/*xagua aldatzeko*/
+    transition: background 0.3s, transform 0.2s;
+}
+
+.register-box button:hover {
+    background: #246b45;
+    transform: scale(1.05);
+}
+
+/* ------------------------------
+🔹 BERRIAK SEKZIOA
+------------------------------ */
+#berriak {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#berriak h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.4em;
+    margin-bottom: 15px;
+}
+
+#berriak .intro {
+    text-align: center;
+    color: #555;
+    margin-bottom: 50px;
+    font-size: 1.1em;
+    line-height: 1.6em;
+}
+
+/* Artikulu bakoitza */
+.berria {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.berria:hover {
+    transform: translateY(-4px);
+}
+
+/* Berriaren irudia */
+.berria img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: cover;
+}
+
+/* Berriaren testua */
+.berria-edukia {
+    flex: 1;
+    padding: 25px 30px;
+}
+
+.berria-edukia h2 {
+    color: #2e8b57;
+    margin-bottom: 8px;
+}
+
+.berria-edukia .data {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+.berria-edukia p {
+    color: #444;
+    line-height: 1.6em;
+}
+
+/* "Irakurri gehiago" botoia */
+.irakurri-gehiago {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #2e8b57;
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.irakurri-gehiago:hover {
+    background-color: #246b45;
+    transform: scale(1.05);
+}

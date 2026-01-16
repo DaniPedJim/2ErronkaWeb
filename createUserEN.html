@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create User</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="berritech-btn">
+                <img src="irudiak/LogoErronka1.png" alt="Berritech">
+            </a>
+            <a href="indexEN.html">HOME</a>
+            <a href="produktuakEN.html">PRODUCTS</a>
+            <a href="norgaraEN.html">ABOUT US</a>
+            <a href="formularioaEN.html"> FORM</a>
+            <a href="loginEN.html">LOGIN</a>
+
+            <div class="hizkuntza">
+                <a href="createUser.html">EU</a> |
+                <a href="createUserEN.html">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <section id="create-user">
+        <h1>CREATE USER</h1>
+
+        <div class="register-box">
+            <form method="get">
+                <label for="izena"><i class="fa fa-id-card"></i> First Name:</label>
+                <input type="text" id="izena" name="izena" placeholder="Your first name" required>
+
+                <label for="abizena"><i class="fa fa-id-badge"></i> Last Name:</label>
+                <input type="text" id="abizena" name="abizena" placeholder="Your last name" required>
+
+                <label for="helbidea"><i class="fa fa-home"></i> Address:</label>
+                <input type="text" id="helbidea" name="helbidea" placeholder="Your street address" required>
+
+                <label for="telefonoa"><i class="fa fa-phone"></i> Phone:</label>
+                <input type="text" id="telefonoa" name="telefonoa" maxlength="9" minlength="9" placeholder="XXXXXXXXX"
+                    required>
+
+                <label for="erabiltzailea"><i class="fa fa-user"></i> Username (Email):</label>
+                <input type="email" id="erabiltzailea" name="erabiltzailea" placeholder="Your email" required>
+
+                <label for="pasahitza"><i class="fa fa-key"></i> Password:</label>
+                <input type="password" id="pasahitza" name="pasahitza" placeholder="Type here" required>
+
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Company Name. All rights reserved.</p>
+        <p>Email: info@company.com | Tel: +34 600 123 456</p>
+        <p>Address: Main Street 12, Donostia, Basque Country</p>
+
+        <div class="redes">
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">X</a>
+        </div>
+    </footer>
+</body>
+
+</html>
