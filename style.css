@@ -44,22 +44,6 @@ nav a {
     font-weight: bold;/*textua potolo jartzen du*/
 }
 
-
-.hizkuntza {
-    float: right;/*eskubian jartzeko */
-    margin-left: 20px;/*ezkerrean espazioa jartzeko*/
-}
-
-.hizkuntza a {
-    text-decoration: none;/*azpimarra kentzeko*/
-    margin: 0 5px;/*ezkerrean eta eskubian espazioak emateko*/
-    font-weight: bold;/*textu lodia jartzeko*/
-}
-
-.hizkuntza a:hover {
-    text-decoration: underline;/*gainean gaudenean azpimarratu egiten da*/
-}
-
 .berritech-btn {
     display: inline-block;/*linean jartzen du baina bere estilo bereziekin*/
     margin: 0 15px;/*ezkerrean eta eskubian separazioa*/

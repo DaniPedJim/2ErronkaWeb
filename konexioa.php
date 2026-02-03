@@ -3,11 +3,11 @@ if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
 
-$servername = "127.0.0.1";
+$servername = "localhost";
 $erabizena   = "root";
-$pasahitza   = "";
+$pasahitza   = "1MG32025";
 $datubase   = "erronka2";
-$port       = 3310; 
+$port       = 3306; 
 
 $conn = new mysqli($servername, $erabizena, $pasahitza, $datubase, $port);
 

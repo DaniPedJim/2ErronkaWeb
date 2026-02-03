@@ -9,8 +9,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
+<body><?php
+        session_start();
+        include("konexioa.php");
+
+        if (!isset($_SESSION['saskia']) && isset($_COOKIE['saskia'])) {
+            $_SESSION['saskia'] = json_decode($_COOKIE['saskia'], true);
+        }
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $email = $_POST['erabiltzailea'];
+            $pasahitza = $_POST['pasahitza'];
+
+            $sql = "select * from erabiltzaileak where email=? and pasahitza=?";
+            $stmt=$conn->prepare($sql);
+            $stmt->bind_param('ss', $email, $pasahitza);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row=$result->fetch_assoc();
+            if($row){
+                // Guardar datos en sesión
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['izena'] = $row['izena'];
+                $_SESSION['rol'] = $row['rol'];
+                // Redirigir al index
+                header("Location: index.php");
+                exit();
+            }else{
+                $error="Pasahitza edo email okerra";
+            }
+        }
+    ?><header>
         <nav>
             <a class="berritech-btn">
                 <img src="irudiak/LogoErronka1.png" alt="Berritech">
@@ -20,19 +49,16 @@
             <a href="norgara.html">NOR GARA</a>
             <a href="formularioa.html">FORMULARIOA</a>
             <a href="login.html">LOGIN</a>
-
-            <div class="hizkuntza">
-                <a href="login.html"> EU</a> |
-                <a href="loginEN.html">EN</a>
-            </div>
         </nav>
     </header>
 
     <section id="login">
         <h1>LOGIN</h1>
 
+        <?php if (isset($error)) echo "<p class='error'>$error</p>"; ?>
+
         <div class="login-box">
-            <form method="get">
+            <form method="post">
                 <label for="erabiltzailea"><i class="fa fa-user"></i> Erabiltzailea:</label>
                 <input type="email" id="erabiltzailea" name="erabiltzailea" placeholder="Zure email" required>
 

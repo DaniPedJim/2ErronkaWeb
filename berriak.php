@@ -19,11 +19,13 @@
             <a href="produktuak.html">PRODUKTUAK</a>
             <a href="norgara.html">NOR GARA</a>
             <a href="formularioa.html">FORMULARIOA</a>
-            <a href="login.html">LOGIN</a>
-            <div class="hizkuntza">
-                <a href="berriak.html">EU</a> |
-                <a href="berriakEN.html">EN</a>
-            </div>
+            <?php
+            require_once "konexioa.php";
+            if($_SESSION['izena']==""):?>
+                <a href="login.php">LOGIN</a>
+            <?php else:?>
+                <a href="logout.php">LOGIN OUT</a>
+            <?php endif;?>
         </nav>
     </header>
 

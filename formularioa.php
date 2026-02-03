@@ -67,11 +67,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="produktuak.php">PRODUKTUAK</a>
             <a href="norgara.php">NOR GARA</a>
             <a href="formularioa.php">FORMULARIOA</a>
-            <a href="login.php">LOGIN</a>
-            <div class="hizkuntza">
-                <a href="formularioa.php"> EU</a> |
-                <a href="formularioaEN.php">EN</a>
-            </div>
+            <?php
+            if($_SESSION['izena']==""):?>
+                <a href="login.php">LOGIN</a>
+            <?php else:?>
+                <a href="logout.php">LOGIN OUT</a>
+            <?php endif;?>
         </nav>
     </header>
 
